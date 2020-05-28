@@ -2,7 +2,9 @@
 
 Script to move windows from one monitor to the next in XFCE.
 
-Forked from : https://github.com/jc00ke/move-to-next-monitor
+I am NOT the original other of this script :
+ * I forked it from : https://github.com/jc00ke/move-to-next-monitor
+ * and made plenty of _personal_ cosmetic changes / deletions
 
 I mapped `F12` to exectute this script (XFCE Start Menu | Settings | Keyboard | Application Shortcuts).
 
