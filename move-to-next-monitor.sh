@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+########################################## ##########################################################
+# forked from : https://github.com/jc00ke/move-to-next-monitor
+#
+# prerequisites :
+#	apt install xdotool wmctrl
+#
+# Define custom hotkeys in XFCE :
+#	XFCE Start Menu | Settings | Keyboard | Application Shortcuts
+########################################## ##########################################################
 #
 # Move the current window to the next monitor.
 #
@@ -22,8 +31,8 @@ windowId=$(xdotool getactivewindow)
 windowIsMaximized_horizontally=$(xprop -id "$windowId" _NET_WM_STATE | grep '_NET_WM_STATE_MAXIMIZED_HORZ')
 windowIsMaximized_vertically=$(xprop -id "$windowId" _NET_WM_STATE | grep '_NET_WM_STATE_MAXIMIZED_VERT')
 # For a maximized window :
-#	windowIsMaximized_horizontally='_NET_WM_STATE(ATOM) = _NET_WM_STATE_MAXIMIZED_HORZ, _NET_WM_STATE_MAXIMIZED_VERT, _NET_WM_STATE_FOCUSED'
-#	windowIsMaximized_vertically='_NET_WM_STATE(ATOM) = _NET_WM_STATE_MAXIMIZED_HORZ, _NET_WM_STATE_MAXIMIZED_VERT, _NET_WM_STATE_FOCUSED'
+#	windowIsMaximized_horizontally = '_NET_WM_STATE(ATOM) = _NET_WM_STATE_MAXIMIZED_HORZ, _NET_WM_STATE_MAXIMIZED_VERT, _NET_WM_STATE_FOCUSED'
+#	windowIsMaximized_vertically   = '_NET_WM_STATE(ATOM) = _NET_WM_STATE_MAXIMIZED_HORZ, _NET_WM_STATE_MAXIMIZED_VERT, _NET_WM_STATE_FOCUSED'
 # Both are empty otherwise
 
 # Un-maximize current window so that we can move it
